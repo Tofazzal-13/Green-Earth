@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
+     <link rel="stylesheet" href="style.css">
     <!-- tailwind and daisyUi added -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -12,14 +14,14 @@
 </head>
 
 <body>
-    <main class="container mx-auto text-center">
-        <h2 class="text-[#4ade80] font-bold text-4xl">Choose Your Trees</h2>
+    <main class="container mx-auto">
+        <h2 class="text-[#4ade80] font-bold text-4xl  text-center">Choose Your Trees</h2>
         <div class="grid grid-cols-4 gap-8">
             <!-- Categories -->
             <div class="bg-white card card-body shadow-2xl col-span-1">
                 <h2 class="font-bold text-3xl">Categories</h2>
                 <div class="space-y-3 p-4">
-                    <button class="btn btn-success w-full" id="allTreesbtn">All Trees</button>
+                    <button class="btn btn-primary w-full" id="allTreesbtn">All Trees</button>
 
                     <!-- categories container -->
                     <div id="categoriesContainer" class="space-y-3">
@@ -29,12 +31,18 @@
             </div>
 
             <!-- trees -->
-            <div class="bg-green-200 col-span-2">
-                Trees
+            <div class="bg-white card card-body shadow-2xl col-span-2">
+                <div id="treesContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  
+                </div>
+                <!-- loading spinner -->
+                <div id="loadingSpinner" class="h-[60vh] hidden justify-center items-center">
+                    <span class="loading loading-dots loading-xl"></span>
+                </div>
             </div>
 
             <!-- cart -->
-            <div class="bg-amber-300 col-span-1">
+            <div class="bg-white card card-body shadow-2xl col-span-1">
                 Cart
             </div>
         </div>
