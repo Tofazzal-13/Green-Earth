@@ -1,9 +1,21 @@
-fetch("https://openapi.programming-hero.com/api/categories")
-.then(res => res.json())
-.then(data => console.log(data))
-.catch(e => console.log(e))
 
+const categoriesContainer = document.getElementById("categoriesContainer")
 
-const loadCategories = () => {
+const  loadCategories = async () => {
+    const url = "https://openapi.programming-hero.com/api/categories";
+    const res = await fetch(url);
+    const data = await res.json();
     
+    data.categories.forEach(category => {
+        
+        const btn = document.createElement("button");
+        btn.className = `btn btn-outline w-full`;
+        btn.textContent = category.category_name;
+        categoriesContainer.appendChild(btn)
+        
+    });
+    
+
 }
+
+loadCategories()
