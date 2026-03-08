@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind and daisyUi added -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Green Earth</title>
+</head>
+
+<body>
+    <main class="container mx-auto text-center">
+        <h2 class="text-[#4ade80] font-bold text-4xl">Choose Your Trees</h2>
+        <div class="grid grid-cols-4 gap-8">
+            <!-- Categories -->
+            <div class="bg-red-200 col-span-1">
+                <h2 class="font-bold text-3xl">Categories</h2>
+                <div class="space-y-3 p-4">
+                    <button class="btn btn-success w-full" id="allTreesbtn">Success</button>
+
+                    <!-- categories container -->
+                    <div id="categoriesContainer" class="space-y-3">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- trees -->
+            <div class="bg-green-200 col-span-2">
+                Trees
+            </div>
+
+            <!-- cart -->
+            <div class="bg-amber-300 col-span-1">
+                Cart
+            </div>
+        </div>
+    </main>
+
+    <!-- js connected -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
